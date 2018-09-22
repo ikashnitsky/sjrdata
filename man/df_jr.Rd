@@ -36,4 +36,33 @@ df_jr
 \description{
 SCImago Journal Rank for all jounals indexed by Scopus in 1999--2017
 }
+\examples{
+
+library(tidyverse)
+library(sjrdata)
+
+# Nature VS Science
+df_jr \%>\%
+    filter(title \%in\% c("Nature", "Science")) \%>\%
+    ggplot(aes(cites_doc_2years, sjr, color = title))+
+    geom_path(size = 1, alpha = .5)+
+    geom_label(aes(label = year \%>\% str_sub(3, 4)),
+               size = 3, label.padding = unit(.15, "line"))
+
+# Demographic journals
+df_jr \%>\%
+    filter(title \%in\% c(
+        "Demography",
+        "Population and Development Review",
+        "European Journal of Population",
+        "Population Studies",
+        "Demographic Research",
+        "Genus"
+    )) \%>\%
+    ggplot(aes(cites_doc_2years, sjr, color = title))+
+    geom_point()+
+    stat_ellipse()+
+    scale_color_brewer(palette = "Dark2")+
+    coord_cartesian(expand = F)
+}
 \keyword{datasets}

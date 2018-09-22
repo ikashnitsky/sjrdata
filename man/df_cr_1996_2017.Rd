@@ -4,9 +4,8 @@
 \name{df_cr_1996_2017}
 \alias{df_cr_1996_2017}
 \title{SCImago Country Rank}
-\format{A tibble with 239 rows and 9 variables:
+\format{A tibble with 239 rows and 8 variables:
   \describe{
-    \item{year}{Year of SCImago Country Ranking calculation.}
     \item{rank}{Rank of the country in a given year.}
     \item{country}{Country.}
     \item{documents}{Number of documents published during the selected year. It is usually called the country's scientific output.}

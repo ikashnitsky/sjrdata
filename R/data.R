@@ -46,7 +46,7 @@
 #'                size = 3, label.padding = unit(.15, "line"))
 #'
 #' # Demographic journals
-#' df %>%
+#' df_jr %>%
 #'     filter(title %in% c(
 #'         "Demography",
 #'         "Population and Development Review",
