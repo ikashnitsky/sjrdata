@@ -31,6 +31,35 @@
 #' @source
 #'   SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2018-09-21, from http://www.scimagojr.com
 #'   \url{https://www.scimagojr.com/journalrank.php}
+#'
+#' @examples
+#'
+#' library(tidyverse)
+#' library(sjrdata)
+#'
+#' # Nature VS Science
+#' df_jr %>%
+#'     filter(title %in% c("Nature", "Science")) %>%
+#'     ggplot(aes(cites_doc_2years, sjr, color = title))+
+#'     geom_path(size = 1, alpha = .5)+
+#'     geom_label(aes(label = year %>% str_sub(3, 4)),
+#'                size = 3, label.padding = unit(.15, "line"))
+#'
+#' # Demographic journals
+#' df %>%
+#'     filter(title %in% c(
+#'         "Demography",
+#'         "Population and Development Review",
+#'         "European Journal of Population",
+#'         "Population Studies",
+#'         "Demographic Research",
+#'         "Genus"
+#'     )) %>%
+#'     ggplot(aes(cites_doc_2years, sjr, color = title))+
+#'     geom_point()+
+#'     stat_ellipse()+
+#'     scale_color_brewer(palette = "Dark2")+
+#'     coord_cartesian(expand = F)
 "df_jr"
 
 
