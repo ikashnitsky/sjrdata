@@ -63,9 +63,8 @@
 #' SCImago Country Rank for all papers indexed by Scopus in 1996--2017. Calculations for the whole period.
 #'
 #' @format
-#'   A tibble with 239 rows and 9 variables:
+#'   A tibble with 239 rows and 8 variables:
 #'   \describe{
-#'     \item{year}{Year of SCImago Country Ranking calculation.}
 #'     \item{rank}{Rank of the country in a given year.}
 #'     \item{country}{Country.}
 #'     \item{documents}{Number of documents published during the selected year. It is usually called the country's scientific output.}
