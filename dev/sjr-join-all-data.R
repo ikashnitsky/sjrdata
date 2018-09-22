@@ -46,7 +46,7 @@ last_year <- 2017
 # journals
 years_j <- 1999:last_year
 
-df_jr <- list()
+sjr_journals <- list()
 
 for (i in seq_along(years_j)) {
     # load specific year's data
@@ -58,21 +58,21 @@ for (i in seq_along(years_j)) {
         colnames(dfi)[9] %>%
         str_replace("[0-9]+", "year")
     # write the temp df into the list
-    df_jr[[i]] <- dfi
+    sjr_journals[[i]] <- dfi
     # name the df in the list
-    names(df_jr)[i] <- years_j[i]
+    names(sjr_journals)[i] <- years_j[i]
 }
 
-df_jr <- df_jr %>% bind_rows(.id = "year")
+sjr_journals <- sjr_journals %>% bind_rows(.id = "year")
 
-devtools::use_data(df_jr, compress = "xz")
+devtools::use_data(sjr_journals, overwrite = T)
 
 
 # countries
 
 years_c <- 1996:last_year
 
-df_cr <- list()
+sjr_countries <- list()
 
 for (i in seq_along(years_c)) {
     tempi <- tempfile()
@@ -86,14 +86,14 @@ for (i in seq_along(years_c)) {
         read_xlsx(path = pathi, sheet = 1)
     )) %>% clean_names()
     # write the temp df into the list
-    df_cr[[i]] <- dfi
+    sjr_countries[[i]] <- dfi
     # name the df in the list
-    names(df_cr)[i] <- years_c[i]
+    names(sjr_countries)[i] <- years_c[i]
 }
 
-df_cr <- df_cr %>% bind_rows(.id = "year")
+sjr_countries <- sjr_countries %>% bind_rows(.id = "year")
 
-devtools::use_data(df_cr, compress = "xz")
+devtools::use_data(sjr_countries, overwrite = T)
 
 
 # countries -- all years togetehr
@@ -107,12 +107,14 @@ xlsxi <- download.file(
     destfile = pathi, mode = "wb"
 )
 
+df_name <- paste0("sjr_countries_1996_", last_year)
+
 assign(
-    paste0("df_cr_1996_", last_year),
+    df_name,
     read_xlsx(pathi) %>% clean_names()
 )
 
-devtools::use_data(get(paste0("df_cr_1996_", last_year)), compress = "xz")
+devtools::use_data(sjr_countries_1996_2017 , overwrite = T)
 
 
 
@@ -124,7 +126,7 @@ jr_dir <- "data-raw/sjr-journal/"
 
 jr_files <- list.files(jr_dir)
 
-df_jr <- list()
+sjr_journals <- list()
 
 for (i in seq_along(jr_files)) {
     # load specific year's data
@@ -136,18 +138,18 @@ for (i in seq_along(jr_files)) {
         colnames(dfi)[9] %>%
         str_replace("[0-9]+", "year")
     # write the temp df into the list
-    df_jr[[i]] <- dfi
+    sjr_journals[[i]] <- dfi
     # name the df in the list
-    names(df_jr)[i] <- jr_files[i] %>% str_extract("[0-9]+")
+    names(sjr_journals)[i] <- jr_files[i] %>% str_extract("[0-9]+")
 }
 
-df_jr <- df_jr %>% bind_rows(.id = "year")
+sjr_journals <- sjr_journals %>% bind_rows(.id = "year")
 
-devtools::use_data(df_jr, compress = "xz")
+devtools::use_data(sjr_journals)
 
-# save(df_jr, file = "data/df_jr.rda", compress = "xz")
+# save(sjr_journals, file = "data/sjr_journals.rda")
 #
-# system.time(load("data/df_jr.rda"))
+# system.time(load("data/sjr_journals.rda"))
 
 
 
@@ -158,7 +160,7 @@ cr_dir <- "data-raw/sjr-country/"
 
 cr_files <- list.files(cr_dir)
 
-df_cr <- list()
+sjr_countries <- list()
 
 for (i in seq_along(cr_files)) {
     # load specific year's data
@@ -166,24 +168,24 @@ for (i in seq_along(cr_files)) {
         read_xlsx(path = paste0(cr_dir, cr_files[i]))
     ) %>% clean_names()
     # write the temp df into the list
-    df_cr[[i]] <- dfi
+    sjr_countries[[i]] <- dfi
     # name the df in the list
-    names(df_cr)[i] <- cr_files[i] %>% str_extract("[0-9]+")
+    names(sjr_countries)[i] <- cr_files[i] %>% str_extract("[0-9]+")
 }
 
-df_cr <- df_cr %>% bind_rows(.id = "year")
+sjr_countries <- sjr_countries %>% bind_rows(.id = "year")
 
-devtools::use_data(df_cr, compress = "xz")
+devtools::use_data(sjr_countries)
 
-# save(df_cr, file = "data/df_cr.rda", compress = "xz")
+# save(sjr_countries, file = "data/sjr_countries.rda")
 #
-# system.time(load("data/df_cr.rda"))
+# system.time(load("data/sjr_countries.rda"))
 
 
-df_cr_1996_2017 <- read_xlsx(
+sjr_countries_1996_2017 <- read_xlsx(
     "data-raw/sjr-country-all-years/scimagojr-country-1996-2017.xlsx"
 ) %>% clean_names()
 
-devtools::use_data(df_cr_1996_2017, compress = "xz")
+devtools::use_data(sjr_countries_1996_2017)
 
-# save(df_cr_1996_2017, file = "data/df_cr_1996_2017.rda", compress = "xz")
+# save(sjr_countries_1996_2017, file = "data/sjr_countries_1996_2017.rda")

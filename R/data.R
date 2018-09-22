@@ -38,7 +38,7 @@
 #' library(sjrdata)
 #'
 #' # Nature VS Science
-#' df_jr %>%
+#' sjr_journals %>%
 #'     filter(title %in% c("Nature", "Science")) %>%
 #'     ggplot(aes(cites_doc_2years, sjr, color = title))+
 #'     geom_path(size = 1, alpha = .5)+
@@ -46,7 +46,7 @@
 #'                size = 3, label.padding = unit(.15, "line"))
 #'
 #' # Demographic journals
-#' df_jr %>%
+#' sjr_journals %>%
 #'     filter(title %in% c(
 #'         "Demography",
 #'         "Population and Development Review",
@@ -60,7 +60,7 @@
 #'     stat_ellipse()+
 #'     scale_color_brewer(palette = "Dark2")+
 #'     coord_cartesian(expand = F)
-"df_jr"
+"sjr_journals"
 
 
 #' SCImago Country Rank
@@ -84,7 +84,7 @@
 #' @source
 #'   SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2018-09-21, from http://www.scimagojr.com
 #'   \url{https://www.scimagojr.com/countryrank.php}
-"df_cr"
+"sjr_countries"
 
 
 #' SCImago Country Rank
@@ -107,4 +107,4 @@
 #' @source
 #'   SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2018-09-21, from http://www.scimagojr.com
 #'   \url{https://www.scimagojr.com/countryrank.php}
-"df_cr_1996_2017"
+"sjr_countries_1996_2017"

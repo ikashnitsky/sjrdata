@@ -6,7 +6,7 @@
 library(tidyverse)
 library(sjrdata)
 
-df <- df_jr
+df <- sjr_journals
 
 df %>%
     filter(title %in% c("Nature", "Science")) %>%
