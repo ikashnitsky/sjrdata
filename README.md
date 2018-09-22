@@ -23,7 +23,7 @@ library(sjrdata)
 View(sjr_countries)
 ```
 
-Basically, all the package gives you three easily accessible data frames: `df_jr` (Journal Rank), `df_cr` (Country Rank, year-by-year), and `df_cr_1996_2017` (Country Rank, all years together).
+Basically, all the package gives you three easily accessible data frames: `sjr_journals` (Journal Rank), `sjr_countries` (Country Rank, year-by-year), and `sjr_countries_1996_2017` (Country Rank, all years together).
 
 
 ***
