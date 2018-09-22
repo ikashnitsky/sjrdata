@@ -4,13 +4,13 @@
 
 [logo]: /sjrdata-logo.png
 
-SCImago Journal & Country Rank provides valuable estimates of academic journals' prestige. The data is freely available at https://www.scimagojr.com and id distributed for deeper analysis in forms of .csv and .xlsx files. I downloaded all the files and pooled them together, ready to be used in R.
+SCImago Journal & Country Rank provides valuable estimates of academic journals' prestige. The data is freely available at https://www.scimagojr.com and is distributed for deeper analysis in forms of .csv and .xlsx files. I downloaded all the files and pooled them together, ready to be used in R.
 
 # How to use `sjrdata`
 
 Install the package from github, load it and use the data. 
 
-The instalation will take a while since the main dataset `df_jr` is pretty heavy (11.7MB compressed).
+The installation will take a while since the main dataset `df_jr` is pretty heavy (11.7MB compressed).
 
 ```{r}
 # install
