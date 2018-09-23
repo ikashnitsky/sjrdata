@@ -4,9 +4,15 @@ Title: SCImago Journal & Country Rank data, ready for R
 Version: 0.1.0
 Author: Ilya Kashnitsky
 Maintainer: Ilya Kashnitsky <ilya.kashnitsky@gmail.com>
-Description: --
+Description: SCImago Journal & Country Rank provides valuable estimates of 
+    academic journals' prestige. The data is freely available at 
+    https://www.scimagojr.com and is distributed for deeper analysis in forms of
+    .csv and .xlsx files. This package pool them all together, ready to be used 
+    in R.
 Encoding: UTF-8
 LazyData: true
-Imports: 
-    tibble
+Depends: R (>= 2.10)
+Imports:
+    tidyverse
 RoxygenNote: 6.1.0
+License: MIT + file LICENSE

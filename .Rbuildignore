@@ -1,3 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$
+^sjrdata-logo.png
+^_config.yml
+^dev$

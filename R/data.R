@@ -14,8 +14,8 @@
 #'     \item{type}{Type: "journal", "book series", "trade journal", or "conference and proceedings"}
 #'     \item{issn}{ISSN journal identifier.}
 #'     \item{sjr}{SCImago Journal Rank indicator. It expresses the average number of weighted citations received in the selected year by the documents published in the selected journal in the three previous years, --i.e. weighted citations received in year X to documents published in the journal in years X-1, X-2 and X-3. See [detailed description of SJR](https://www.scimagojr.com/SCImagoJournalRank.pdf) (PDF).}
-#'     \item{sjr_best_quartile}{Highest quartile of the journal among all categories it belons to.}
-#'     \item{h_index}{Hirsh index of the journal. The h index expresses the journal's number of articles (h) that have received at least h citations. It quantifies both journal scientific productivity and scientific impact and it is also applicable to scientists, countries, etc. ([see H-index wikipedia definition](http://en.wikipedia.org/wiki/Hirsch_number)).}
+#'     \item{sjr_best_quartile}{Highest quartile of the journal among all categories it belongs to.}
+#'     \item{h_index}{Hirsch index of the journal. The h index expresses the journal's number of articles (h) that have received at least h citations. It quantifies both journal scientific productivity and scientific impact and it is also applicable to scientists, countries, etc. ([see H-index wikipedia definition](http://en.wikipedia.org/wiki/Hirsch_number)).}
 #'     \item{total_docs_year}{Total number of published documents within a specific year. All types of documents are considered, including citable and non citable documents.}
 #'     \item{total_docs_3years}{Published documents in the three previous years (selected year documents are excluded), i.e.when the year X is selected, then X-1, X-2 and X-3 published documents are retrieved. All types of documents are considered, including citable and non citable documents.}
 #'     \item{total_refs}{Total number of citations received by a journal to the documents published within a specific year.}
@@ -34,6 +34,7 @@
 #'
 #' @examples
 #'
+#' \dontrun{
 #' library(tidyverse)
 #' library(sjrdata)
 #'
@@ -60,6 +61,7 @@
 #'     stat_ellipse()+
 #'     scale_color_brewer(palette = "Dark2")+
 #'     coord_cartesian(expand = F)
+#' }
 "sjr_journals"
 
 
@@ -78,7 +80,7 @@
 #'     \item{citations}{Number of citations by the documents published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2017, all published documents during this period are considered.}
 #'     \item{self_citations}{Country self-citations. Number of self-citations of all dates received by the documents published during the source year, --i.e. self-citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2017, all published documents during this period are considered.}
 #'     \item{citations_per_document}{Average citations per document published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2017, all published documents during this period are considered.}
-#'     \item{h_index}{Hirsh index of the country's scientific output.}
+#'     \item{h_index}{Hirsch index of the country's scientific output.}
 #'   }
 #'
 #' @source
@@ -101,7 +103,7 @@
 #'     \item{citations}{Number of citations by the documents published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2017, all published documents during this period are considered.}
 #'     \item{self_citations}{Country self-citations. Number of self-citations of all dates received by the documents published during the source year, --i.e. self-citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2017, all published documents during this period are considered.}
 #'     \item{citations_per_document}{Average citations per document published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2017, all published documents during this period are considered.}
-#'     \item{h_index}{Hirsh index of the country's scientific output.}
+#'     \item{h_index}{Hirsch index of the country's scientific output.}
 #'   }
 #'
 #' @source

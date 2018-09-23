@@ -13,7 +13,7 @@
     \item{citations}{Number of citations by the documents published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2017, all published documents during this period are considered.}
     \item{self_citations}{Country self-citations. Number of self-citations of all dates received by the documents published during the source year, --i.e. self-citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2017, all published documents during this period are considered.}
     \item{citations_per_document}{Average citations per document published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2017, all published documents during this period are considered.}
-    \item{h_index}{Hirsh index of the country's scientific output.}
+    \item{h_index}{Hirsch index of the country's scientific output.}
   }}
 \source{
 SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2018-09-21, from http://www.scimagojr.com
