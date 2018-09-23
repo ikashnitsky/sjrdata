@@ -1,8 +1,5 @@
-# sjrdata
+# <img src="inst/figures/sjrdata-logo.png" align="right" width="150" height="150" />  sjrdata: all SCImago Journal & Country Rank data, ready for R
 
-[![][logo]][logo]
-
-[logo]: /sjrdata-logo.png
 
 SCImago Journal & Country Rank provides valuable estimates of academic journals' prestige. The data is freely available at https://www.scimagojr.com and is distributed for deeper analysis in forms of .csv and .xlsx files. I downloaded all the files and pooled them together, ready to be used in R.
 
