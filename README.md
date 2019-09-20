@@ -7,7 +7,7 @@ SCImago Journal & Country Rank provides valuable estimates of academic journals'
 
 Install the package from github, load it and use the data. 
 
-The installation will take a while since the main dataset `sjr_journals` is pretty heavy (15.7MB compressed).
+The installation will take a while since the main dataset `sjr_journals` is pretty heavy (17.3MB compressed).
 
 ```{r}
 # install
@@ -20,7 +20,7 @@ library(sjrdata)
 View(sjr_countries)
 ```
 
-Basically, all the package gives you three easily accessible data frames: `sjr_journals` (Journal Rank), `sjr_countries` (Country Rank, year-by-year), and `sjr_countries_1996_2017` (Country Rank, all years together).
+Basically, all the package gives you three easily accessible data frames: `sjr_journals` (Journal Rank), `sjr_countries` (Country Rank, year-by-year), and `sjr_countries_total` (Country Rank, all years together).
 
 
 ***
