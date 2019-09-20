@@ -34,9 +34,9 @@ country_url <- function(year) {
 
 # set last available year -------------------------------------------------
 
-# As of today, 2018-09-22, the last data year is 2017
+# As of today, 2019-09-19, the last data year is 2018
 # TO be updated once a year
-last_year <- 2017
+last_year <- 2018
 
 
 # get and tidy the data -- journals ---------------------------------------
@@ -106,11 +106,7 @@ xlsxi <- download.file(
     destfile = pathi, mode = "wb"
 )
 
-assign(
-    paste0("df_cr_1996_", last_year),
-    read_xlsx(pathi) %>% clean_names()
-)
+df_cr_total <- read_xlsx(pathi) %>% clean_names()
 
 # consider saving the data!
-# save(get(paste0("df_cr_1996_", last_year)),
-#      file = paste0("df_cr_1996_", last_year, ".rda"))
+# save(df_cr_total, file = "df_cr_total.rda")
