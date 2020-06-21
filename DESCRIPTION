@@ -17,5 +17,5 @@ Depends: R (>= 2.10)
 Imports:
     tidyverse
 URL: https://github.com/ikashnitsky/sjrdata
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0.9000
 License: MIT + file LICENSE
