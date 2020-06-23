@@ -33,9 +33,9 @@ country_url <- function(year) {
 
 # set last available year -------------------------------------------------
 
-# As of today, 2018-09-21, the last data year is 2017
-# TO be updated once a year
-last_year <- 2017
+# As of today, 2020-06-21, the last data year is 2019
+# To be updated once a year
+last_year <- 2019
 
 
 # get the data automatically ----------------------------------------------
@@ -51,7 +51,7 @@ for (i in seq_along(years_j)) {
     dfi <- suppressMessages(suppressWarnings(
         read_csv2(url(journal_url(years_j[i])))
     )) %>% clean_names()
-    # fix the uniquiely named column of total docs
+    # fix the uniquely named column of total docs
     colnames(dfi)[9] <-
         colnames(dfi)[9] %>%
         str_replace("[0-9]+", "year")
@@ -63,7 +63,7 @@ for (i in seq_along(years_j)) {
 
 sjr_journals <- sjr_journals %>% bind_rows(.id = "year")
 
-devtools::use_data(sjr_journals, overwrite = T)
+usethis::use_data(sjr_journals, overwrite = T)
 
 
 # countries
@@ -91,7 +91,7 @@ for (i in seq_along(years_c)) {
 
 sjr_countries <- sjr_countries %>% bind_rows(.id = "year")
 
-devtools::use_data(sjr_countries, overwrite = T)
+usethis::use_data(sjr_countries, overwrite = T)
 
 
 # countries -- all years togetehr
@@ -108,4 +108,4 @@ xlsxi <- download.file(
 sjr_countries_total <- read_xlsx(pathi) %>% clean_names()
 
 
-devtools::use_data(sjr_countries_total , overwrite = T)
+usethis::use_data(sjr_countries_total , overwrite = T)
