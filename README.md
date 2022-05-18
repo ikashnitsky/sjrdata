@@ -7,7 +7,7 @@ SCImago Journal & Country Rank provides valuable estimates of academic journals'
 
 Install the package from github, load it and use the data. 
 
-The installation will take a while since the main dataset `sjr_journals` is pretty heavy (17.3MB compressed).
+The installation will take a while since the main dataset `sjr_journals` is pretty heavy (21.5MB compressed).
 
 ```{r}
 # install
