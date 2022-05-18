@@ -2,10 +2,10 @@
 
 #' SCImago Journal Rank
 #'
-#' SCImago Journal Rank for all journals indexed by Scopus in 1999--2019
+#' SCImago Journal Rank for all journals indexed by Scopus in 1999--2021
 #'
 #' @format
-#'   A tibble with 582,889 rows and 21 variables:
+#'   A tibble with 620,540 rows and 21 variables:
 #'   \describe{
 #'     \item{year}{Year of SCImago Journal Ranking calculation.}
 #'     \item{rank}{Rank of the journal among all journals.}
@@ -31,7 +31,7 @@
 #'   }
 #'
 #' @source
-#'   SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2019-09-19, from http://www.scimagojr.com
+#'   SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2022-05-18, from http://www.scimagojr.com
 #'   \url{https://www.scimagojr.com/journalrank.php}
 #'
 #' @examples
@@ -69,10 +69,10 @@
 
 #' SCImago Country Rank
 #'
-#' SCImago Country Rank for all papers indexed by Scopus in 1996--2019. Calculations year-by-year.
+#' SCImago Country Rank for all papers indexed by Scopus in 1996--2021. Calculations year-by-year.
 #'
 #' @format
-#'   A tibble with 5395 rows and 10 variables:
+#'   A tibble with 5861 rows and 10 variables:
 #'   \describe{
 #'     \item{year}{Year of SCImago Country Ranking calculation.}
 #'     \item{rank}{Rank of the country in a given year.}
@@ -80,37 +80,37 @@
 #'     \item{region}{Region of the world.}
 #'     \item{documents}{Number of documents published during the selected year. It is usually called the country's scientific output.}
 #'     \item{citable_documents}{Selected year citable documents. Exclusively articles, reviews and conference papers are considered.}
-#'     \item{citations}{Number of citations by the documents published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2017, all published documents during this period are considered.}
+#'     \item{citations}{Number of citations by the documents published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2021, all published documents during this period are considered.}
 #'     \item{self_citations}{Country self-citations. Number of self-citations of all dates received by the documents published during the source year, --i.e. self-citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2018, all published documents during this period are considered.}
-#'     \item{citations_per_document}{Average citations per document published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2017, all published documents during this period are considered.}
+#'     \item{citations_per_document}{Average citations per document published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2021, all published documents during this period are considered.}
 #'     \item{h_index}{Hirsch index of the country's scientific output.}
 #'   }
 #'
 #' @source
-#'   SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2019-09-19, from http://www.scimagojr.com
+#'   SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2022-05-18, from http://www.scimagojr.com
 #'   \url{https://www.scimagojr.com/countryrank.php}
 "sjr_countries"
 
 
 #' SCImago Country Rank
 #'
-#' SCImago Country Rank for all papers indexed by Scopus in 1996--2019. Calculations for the whole period.
+#' SCImago Country Rank for all papers indexed by Scopus in 1996--2021. Calculations for the whole period.
 #'
 #' @format
-#'   A tibble with 240 rows and 9 variables:
+#'   A tibble with 242 rows and 9 variables:
 #'   \describe{
 #'     \item{rank}{Rank of the country in a given year.}
 #'     \item{country}{Name of country.}
 #'     \item{region}{Region of the world.}
 #'     \item{documents}{Number of documents published during the selected year. It is usually called the country's scientific output.}
 #'     \item{citable_documents}{Selected year citable documents. Exclusively articles, reviews and conference papers are considered.}
-#'     \item{citations}{Number of citations by the documents published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2017, all published documents during this period are considered.}
+#'     \item{citations}{Number of citations by the documents published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2021, all published documents during this period are considered.}
 #'     \item{self_citations}{Country self-citations. Number of self-citations of all dates received by the documents published during the source year, --i.e. self-citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2018, all published documents during this period are considered.}
-#'     \item{citations_per_document}{Average citations per document published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2017, all published documents during this period are considered.}
+#'     \item{citations_per_document}{Average citations per document published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2021, all published documents during this period are considered.}
 #'     \item{h_index}{Hirsch index of the country's scientific output.}
 #'   }
 #'
 #' @source
-#'   SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2019-09-19, from http://www.scimagojr.com
+#'   SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2022-05-18, from http://www.scimagojr.com
 #'   \url{https://www.scimagojr.com/countryrank.php}
 "sjr_countries_total"
