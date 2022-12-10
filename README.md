@@ -5,6 +5,8 @@
 [![Lifecycle:Maturing](https://img.shields.io/badge/Lifecycle-Maturing-339999?style=flat-square&logo=github)](https://github.com/ikashnitsky/sjrdata) 
 [![Contributors](https://img.shields.io/github/contributors/ikashnitsky/sjrdata?style=flat-square)](https://github.com/ikashnitsky/sjrdata/graphs/contributors) 
 [![Twitter Follow](https://img.shields.io/twitter/follow/ikashnitsky?color=blue&label=%40ikashnitsky&logo=twitter&style=flat-square)](https://twitter.com/ikashnitsky) 
+[![Twitter Follow](https://img.shields.io/twitter/follow/robjhyndman?color=blue&label=%40robjhyndman&logo=twitter&style=flat-square)](https://twitter.com/robjhyndman) 
+
 
 <!-- badges: end -->
 
