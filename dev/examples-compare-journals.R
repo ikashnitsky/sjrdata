@@ -1,9 +1,11 @@
-
-
-
-# example top journals ----------------------------------------------------
+#===============================================================================
+# 2022-05-18 -- sjrdata
+# Illustrate the package using some demographic journals
+# Ilya Kashnitsky, ilya.kashnitsky@gmail.com, @ikashnitsky
+#===============================================================================
 
 library(tidyverse)
+library(hrbrthemes)
 library(sjrdata)
 
 df <- sjr_journals
@@ -47,3 +49,44 @@ df %>%
          subtitle = "SCImago Journal Rank, 1999--2017",
          caption = "ikashnitsky.github.io")
 
+# UPD  2022-05-18 ------------------------------
+
+
+df %>%
+    filter(title %in% c(
+        "Demography",
+        "Population and Development Review",
+        "European Journal of Population",
+        "Population, Space and Place",
+        "Demographic Research",
+        "Genus"
+    )) %>%
+    mutate(year = year %>% as.numeric) %>%
+    ggplot(aes(year, sjr, color = title))+
+    geom_hline(yintercept = 0, size = .75, color = "#3a3a3a")+
+    geom_point(aes(size = total_docs_year), alpha = .5)+
+    stat_smooth(se = F, span = .85)+
+    geom_text(
+        data = . %>% filter(year == 2021),
+        aes(label = title),
+        x = 1998, y = seq(3.7, 2.7, length.out = 6),
+        hjust = 0, family = font_rc
+    )+
+    scale_color_brewer(NULL, palette = "Dark2")+
+    scale_y_continuous(limits = c(0, 3.7), position = "right")+
+    theme_minimal(base_family = font_rc)+
+    theme(
+        legend.position = "none",
+        plot.title = element_text("Roboto Slab", face = 2)
+    )+
+    labs(
+        x = NULL,
+        y = "SJR index",
+        title = "Selected demographic journals",
+        subtitle = "SCImago Journal Rank, 1999-2021, via #rstats {sjrdata}",
+        caption = "@ikashnitsky"
+    )
+
+ggsave("~/Downloads/sjr-demography.png", width = 6.4, height = 3.6, type = "cairo-png", bg = "#ffffff")
+
+sjr_countries %>% view

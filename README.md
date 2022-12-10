@@ -1,4 +1,12 @@
-# <img src="inst/figures/sjrdata-logo.png" align="right" width="150" height="150" />  sjrdata: all SCImago Journal & Country Rank data, ready for R
+# **sjrdata: all SCImago Journal & Country Rank data, ready for R**  <a href='https://github.com/ikashnitsky/sjrdata'><img src='inst/figures/sjrdata-logo.png' align="right" width="20%" min-width="200px"/></a>
+
+<!-- badges: start -->
+[![Version-Number](https://img.shields.io/github/r-package/v/ikashnitsky/sjrdata?label=sjrdata&logo=R&style=flat-square)](https://github.com/ikashnitsky/sjrdata) 
+[![Lifecycle:Maturing](https://img.shields.io/badge/Lifecycle-Maturing-339999?style=flat-square&logo=github)](https://github.com/ikashnitsky/sjrdata) 
+[![Contributors](https://img.shields.io/github/contributors/ikashnitsky/sjrdata?style=flat-square)](https://github.com/ikashnitsky/sjrdata/graphs/contributors) 
+[![Twitter Follow](https://img.shields.io/twitter/follow/ikashnitsky?color=blue&label=%40ikashnitsky&logo=twitter&style=flat-square)](https://twitter.com/ikashnitsky) 
+
+<!-- badges: end -->
 
 
 SCImago Journal & Country Rank provides valuable estimates of academic journals' prestige. The data is freely available at https://www.scimagojr.com and is distributed for deeper analysis in forms of .csv and .xlsx files. I downloaded all the files and pooled them together, ready to be used in R.
