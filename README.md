@@ -3,8 +3,8 @@
 <!-- badges: start -->
 [![Version-Number](https://img.shields.io/github/r-package/v/ikashnitsky/sjrdata?label=sjrdata&logo=R&style=flat)](https://github.com/ikashnitsky/sjrdata) 
 [![Lifecycle:Maturing](https://img.shields.io/badge/Lifecycle-Maturing-339999?style=flat&logo=github)](https://github.com/ikashnitsky/sjrdata) 
-[![Contributors](https://img.shields.io/github/contributors/ikashnitsky/sjrdata?style=flat)](https://github.com/ikashnitsky/sjrdata/graphs/contributors) 
-![Mastodon Follow](https://img.shields.io/mastodon/follow/109292146183754832?domain=https%3A%2F%2Ffosstodon.org)  
+[![Contributors](https://img.shields.io/github/contributors/ikashnitsky/sjrdata?style=flat)](https://github.com/ikashnitsky/sjrdata/graphs/contributors)    
+![Mastodon Follow](https://img.shields.io/mastodon/follow/109292146183754832?domain=https%3A%2F%2Ffosstodon.org) 
 ![Mastodon Follow](https://img.shields.io/mastodon/follow/109250436414832026?domain=https%3A%2F%2Faus.social) 
 
 109250436414832026
