@@ -7,8 +7,6 @@
 ![Mastodon Follow](https://img.shields.io/mastodon/follow/109292146183754832?domain=https%3A%2F%2Ffosstodon.org) 
 ![Mastodon Follow](https://img.shields.io/mastodon/follow/109250436414832026?domain=https%3A%2F%2Faus.social) 
 
-109250436414832026
-
 
 <!-- badges: end -->
 
