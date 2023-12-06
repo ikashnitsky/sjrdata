@@ -4,6 +4,7 @@
 # Ilya Kashnitsky, ilya.kashnitsky@gmail.com
 #===============================================================================
 # UPD  2022-05-18 ------------------------------
+# UPD  2023-12-06 ------------------------------
 
 
 library(tidyverse)
@@ -45,9 +46,16 @@ get_journal <- function(year) {
 # 1999:2021 %>% map(get_journal)
 
 # incremental
-# UPD  2022-05-18
-# 2021
-get_journal(2021)
+# # UPD  2022-05-18
+# # 2021
+# get_journal(2021)
+
+# UPD  2023-12-06
+# 2022
+get_journal(2022)
+
+
+
 
 
 # function to read these csv and correct on the fly
@@ -98,9 +106,15 @@ get_country <- function(year) {
 # 1999:2021 %>% map(get_country)
 
 # incremental
-# UPD  2022-05-18
-# 2021
-get_country(2021)
+# # UPD  2022-05-18
+# # 2021
+# get_country(2021)
+
+# UPD  2023-12-06
+# 2022
+get_country(2022)
+
+
 
 # read in all the country years
 sjr_countries <- map_dfr(
@@ -120,7 +134,7 @@ usethis::use_data(sjr_countries, overwrite = T)
 
 get_all_countries <- function(last_year) {
     download.file(
-        url = country_url(
+        url = paste0(
             "https://www.scimagojr.com/countryrank.php?out=xls"
         ),
         destfile = paste0(
@@ -131,9 +145,13 @@ get_all_countries <- function(last_year) {
     )
 }
 
-# UPD  2022-05-18
-# 2021
-get_all_countries(2021)
+# # UPD  2022-05-18
+# # 2021
+# get_all_countries(2021)
+
+# UPD  2023-12-06
+# 2022
+get_all_countries(2022)
 
 # read all countries total data
 sjr_countries_total <- read_xlsx(
