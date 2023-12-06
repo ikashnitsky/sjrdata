@@ -50,6 +50,15 @@ df %>%
          caption = "ikashnitsky.github.io")
 
 # UPD  2022-05-18 ------------------------------
+# UPD  2023-12-06 ------------------------------
+
+library(showtext)
+sysfonts::font_add_google("Atkinson Hyperlegible", "ah")
+showtext_auto()
+
+# set ggplot2 theme
+devtools::source_gist("653e1040a07364ae82b1bb312501a184")
+theme_set(theme_ik())
 
 
 df %>%
@@ -65,28 +74,27 @@ df %>%
     ggplot(aes(year, sjr, color = title))+
     geom_hline(yintercept = 0, size = .75, color = "#3a3a3a")+
     geom_point(aes(size = total_docs_year), alpha = .5)+
-    stat_smooth(se = F, span = .85)+
+    stat_smooth(se = F, span = .75)+
     geom_text(
-        data = . %>% filter(year == 2021),
+        data = . %>% filter(year == 2022),
         aes(label = title),
         x = 1998, y = seq(3.7, 2.7, length.out = 6),
-        hjust = 0, family = font_rc
+        hjust = 0, size = 4, fontface = 2
     )+
     scale_color_brewer(NULL, palette = "Dark2")+
     scale_y_continuous(limits = c(0, 3.7), position = "right")+
-    theme_minimal(base_family = font_rc)+
     theme(
         legend.position = "none",
-        plot.title = element_text("Roboto Slab", face = 2)
+        plot.title = element_text(face = 2)
     )+
     labs(
         x = NULL,
         y = "SJR index",
         title = "Selected demographic journals",
-        subtitle = "SCImago Journal Rank, 1999-2021, via #rstats {sjrdata}",
-        caption = "@ikashnitsky"
+        subtitle = "SCImago Journal Rank, 1999-2022, via #rstats {sjrdata}",
+        caption = "Ilya Kashnitsky @ikashnitsky.phd"
     )
 
-ggsave("~/Downloads/sjr-demography.png", width = 6.4, height = 3.6, type = "cairo-png", bg = "#ffffff")
+ggsave("~/Downloads/sjr-demography.pdf", width = 6, height = 4.5)
 
 sjr_countries %>% view
