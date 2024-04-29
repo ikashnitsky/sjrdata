@@ -5,7 +5,7 @@
 \alias{sjr_journals}
 \title{SCImago Journal Rank}
 \format{
-A tibble with 648,453 rows and 22 variables:
+A tibble with 677,618 rows and 22 variables:
   \describe{
     \item{year}{Year of SCImago Journal Ranking calculation.}
     \item{rank}{Rank of the journal among all journals.}
@@ -32,14 +32,14 @@ A tibble with 648,453 rows and 22 variables:
   }
 }
 \source{
-SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2023-12-06, from http://www.scimagojr.com
+SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2024-04-22, from http://www.scimagojr.com
   \url{https://www.scimagojr.com/journalrank.php}
 }
 \usage{
 sjr_journals
 }
 \description{
-SCImago Journal Rank for all journals indexed by Scopus in 1999--2022
+SCImago Journal Rank for all journals indexed by Scopus in 1999--2023
 }
 \examples{
 

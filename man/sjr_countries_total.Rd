@@ -12,20 +12,20 @@ A tibble with 243 rows and 9 variables:
     \item{region}{Region of the world.}
     \item{documents}{Number of documents published during the selected year. It is usually called the country's scientific output.}
     \item{citable_documents}{Selected year citable documents. Exclusively articles, reviews and conference papers are considered.}
-    \item{citations}{Number of citations by the documents published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2022, all published documents during this period are considered.}
-    \item{self_citations}{Country self-citations. Number of self-citations of all dates received by the documents published during the source year, --i.e. self-citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2022, all published documents during this period are considered.}
-    \item{citations_per_document}{Average citations per document published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2022, all published documents during this period are considered.}
+    \item{citations}{Number of citations by the documents published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2023, all published documents during this period are considered.}
+    \item{self_citations}{Country self-citations. Number of self-citations of all dates received by the documents published during the source year, --i.e. self-citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2023, all published documents during this period are considered.}
+    \item{citations_per_document}{Average citations per document published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2023, all published documents during this period are considered.}
     \item{h_index}{Hirsch index of the country's scientific output.}
   }
 }
 \source{
-SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2023-12-06, from http://www.scimagojr.com
+SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2024-04-22, from http://www.scimagojr.com
   \url{https://www.scimagojr.com/countryrank.php}
 }
 \usage{
 sjr_countries_total
 }
 \description{
-SCImago Country Rank for all papers indexed by Scopus in 1996--2022. Calculations for the whole period.
+SCImago Country Rank for all papers indexed by Scopus in 1996--2023. Calculations for the whole period.
 }
 \keyword{datasets}

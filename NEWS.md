@@ -1,3 +1,9 @@
+# sjrdata 1.0.23
+
+2024-04-22
+
+Update to include 2023 data 
+
 # sjrdata 0.5.0
 
 2023-12-06

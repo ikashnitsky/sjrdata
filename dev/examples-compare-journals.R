@@ -1,5 +1,5 @@
 #===============================================================================
-# 2022-05-18 -- sjrdata
+# 2024-04-22 -- sjrdata
 # Illustrate the package using some demographic journals
 # Ilya Kashnitsky, ilya.kashnitsky@gmail.com, @ikashnitsky
 #===============================================================================

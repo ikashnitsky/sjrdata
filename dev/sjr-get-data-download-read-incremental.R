@@ -5,6 +5,7 @@
 #===============================================================================
 # UPD  2022-05-18 ------------------------------
 # UPD  2023-12-06 ------------------------------
+# UPD  2024-04-22 ------------------------------
 
 
 library(tidyverse)
@@ -53,7 +54,9 @@ get_journal <- function(year) {
 # UPD  2023-12-06
 # 2022
 get_journal(2022)
-
+# UPD  2024-04-22
+# 2023
+get_journal(2023)
 
 
 
@@ -113,6 +116,9 @@ get_country <- function(year) {
 # UPD  2023-12-06
 # 2022
 get_country(2022)
+# UPD  2024-04-22
+# 2023
+get_country(2023)
 
 
 
@@ -151,7 +157,11 @@ get_all_countries <- function(last_year) {
 
 # UPD  2023-12-06
 # 2022
-get_all_countries(2022)
+# get_all_countries(2022)
+
+# UPD  2024-04-22
+# 2023
+get_all_countries(2023)
 
 # read all countries total data
 sjr_countries_total <- read_xlsx(
@@ -160,3 +170,13 @@ sjr_countries_total <- read_xlsx(
     clean_names()
 
 usethis::use_data(sjr_countries_total , overwrite = T)
+
+
+
+# DEV LINES ---------------------------------------------------------------
+
+devtools::document()
+
+# devtools::build()  # click button instead
+
+devtools::check()
