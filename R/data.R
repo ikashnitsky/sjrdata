@@ -2,10 +2,10 @@
 
 #' SCImago Journal Rank
 #'
-#' SCImago Journal Rank for all journals indexed by Scopus in 1999--2023
+#' SCImago Journal Rank for all journals indexed by Scopus in 1999--2024
 #'
 #' @format
-#'   A tibble with 677,618 rows and 22 variables:
+#'   A tibble with 731,245 rows and 25 variables:
 #'   \describe{
 #'     \item{year}{Year of SCImago Journal Ranking calculation.}
 #'     \item{rank}{Rank of the journal among all journals.}
@@ -19,10 +19,13 @@
 #'     \item{total_docs_year}{Total number of published documents within a specific year. All types of documents are considered, including citable and non citable documents.}
 #'     \item{total_docs_3years}{Published documents in the three previous years (selected year documents are excluded), i.e.when the year X is selected, then X-1, X-2 and X-3 published documents are retrieved. All types of documents are considered, including citable and non citable documents.}
 #'     \item{total_refs}{Total number of citations received by a journal to the documents published within a specific year.}
-#'     \item{total_cites_3years}{Number of citations received in the selected year by a journal to the documents published in the three previous years, --i.e. citations received in year X to documents published in years X-1, X-2 and X-3. All types of documents are considered.}
-#'     \item{citable_docs_3years}{Number of citable documents published by a journal in the three previous years (selected year documents are excluded). Exclusively articles, reviews and conference papers are considered..}
-#'     \item{cites_doc_2years}{Average citations per document in a 2 year period. It is computed considering the number of citations received by a journal in the current year to the documents published in the two previous years, --i.e. citations received in year X to documents published in years X-1 and X-2. Comparable to Journal Impact Factor.}
-#'     \item{ref_doc}{Average number of references per document in the selected year..}
+#'     \item{total_citations_3years}{Number of citations received in the selected year by a journal to the documents published in the three previous years, --i.e. citations received in year X to documents published in years X-1, X-2 and X-3. All types of documents are considered.}
+#'     \item{citable_docs_3years}{Number of citable documents published by a journal in the three previous years (selected year documents are excluded). Exclusively articles, reviews and conference papers are considered.}
+#'     \item{citations_doc_2years}{Average citations per document in a 2 year period. It is computed considering the number of citations received by a journal in the current year to the documents published in the two previous years, --i.e. citations received in year X to documents published in years X-1 and X-2. Comparable to Journal Impact Factor.}
+#'     \item{ref_doc}{Average number of references per document in the selected year.}
+#'     \item{percent_female}{Percentage of female authors. To determine the gender of authors, a method based on given names was employed, grounded in "cultural consensus theory" (See Van Buskirk et al. [2023](https://ojs.aaai.org/index.php/ICWSM/article/view/22195)).}
+#'     \item{overton}{Number of documents cited by public policy documents according to [Overton](https://www.overton.io) database.}
+#'     \item{sdg}{Number of documents related to the Sustainable Development Goals defined by the United Nations according to the [Elsevier 2023 Sustainable Development Goals (SDGs) Mapping](https://elsevier.digitalcommonsdata.com/datasets/y2zyy9vwzy/1). Available from 2018 onwards.}
 #'     \item{country}{Country of the publisher.}
 #'     \item{region}{Region of the publisher.}
 #'     \item{publisher}{Publisher of the journal.}
@@ -32,7 +35,7 @@
 #'   }
 #'
 #' @source
-#'   SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2024-04-22, from http://www.scimagojr.com
+#'   SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2025-07-04, from http://www.scimagojr.com
 #'   \url{https://www.scimagojr.com/journalrank.php}
 #'
 #' @examples
@@ -70,10 +73,10 @@
 
 #' SCImago Country Rank
 #'
-#' SCImago Country Rank for all papers indexed by Scopus in 1996--2023. Calculations year-by-year.
+#' SCImago Country Rank for all papers indexed by Scopus in 1996--2024. Calculations year-by-year.
 #'
 #' @format
-#'   A tibble with 6328 rows and 10 variables:
+#'   A tibble with 5914 rows and 10 variables:
 #'   \describe{
 #'     \item{year}{Year of SCImago Country Ranking calculation.}
 #'     \item{rank}{Rank of the country in a given year.}
@@ -81,21 +84,21 @@
 #'     \item{region}{Region of the world.}
 #'     \item{documents}{Number of documents published during the selected year. It is usually called the country's scientific output.}
 #'     \item{citable_documents}{Selected year citable documents. Exclusively articles, reviews and conference papers are considered.}
-#'     \item{citations}{Number of citations by the documents published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2023, all published documents during this period are considered.}
-#'     \item{self_citations}{Country self-citations. Number of self-citations of all dates received by the documents published during the source year, --i.e. self-citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2023, all published documents during this period are considered.}
-#'     \item{citations_per_document}{Average citations per document published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2023, all published documents during this period are considered.}
-#'     \item{h_index}{Hirsch index of the country's scientific output.}
+#'     \item{citations}{Number of citations by the documents published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X.}
+#'     \item{self_citations}{Country self-citations. Number of self-citations of all dates received by the documents published during the source year, --i.e. self-citations in years X, X+1, X+2, X+3... to documents published during year X. }
+#'     \item{citations_per_document}{Average citations per document published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X.}
+#'     \item{h_index}{Hirsch index of the country's scientific output. The h index expresses the journal's number of articles (h) that have received at least h citations. It quantifies both journal scientific productivity and scientific impact and it is also applicable to scientists, countries, etc. ([see H-index Wikipedia definition](http://en.wikipedia.org/wiki/Hirsch_number)).}
 #'   }
 #'
 #' @source
-#'   SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2023-12-06, from http://www.scimagojr.com
+#'   SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2025-07-04, from http://www.scimagojr.com
 #'   \url{https://www.scimagojr.com/countryrank.php}
 "sjr_countries"
 
 
 #' SCImago Country Rank
 #'
-#' SCImago Country Rank for all papers indexed by Scopus in 1996--2023. Calculations for the whole period.
+#' SCImago Country Rank for all papers indexed by Scopus in 1996--2024. Calculations for the whole period.
 #'
 #' @format
 #'   A tibble with 243 rows and 9 variables:
@@ -105,13 +108,13 @@
 #'     \item{region}{Region of the world.}
 #'     \item{documents}{Number of documents published during the selected year. It is usually called the country's scientific output.}
 #'     \item{citable_documents}{Selected year citable documents. Exclusively articles, reviews and conference papers are considered.}
-#'     \item{citations}{Number of citations by the documents published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2023, all published documents during this period are considered.}
-#'     \item{self_citations}{Country self-citations. Number of self-citations of all dates received by the documents published during the source year, --i.e. self-citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2023, all published documents during this period are considered.}
-#'     \item{citations_per_document}{Average citations per document published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2023, all published documents during this period are considered.}
-#'     \item{h_index}{Hirsch index of the country's scientific output.}
+#'     \item{citations}{Number of citations by the documents published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2024, all published documents during this period are considered.}
+#'     \item{self_citations}{Country self-citations. Number of self-citations of all dates received by the documents published during the source year, --i.e. self-citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2024, all published documents during this period are considered.}
+#'     \item{citations_per_document}{Average citations per document published during the source year, --i.e. citations in years X, X+1, X+2, X+3... to documents published during year X. When referred to the period 1996-2024, all published documents during this period are considered.}
+#'     \item{h_index}{Hirsch index of the country's scientific output. The h index expresses the journal's number of articles (h) that have received at least h citations. It quantifies both journal scientific productivity and scientific impact and it is also applicable to scientists, countries, etc. ([see H-index Wikipedia definition](http://en.wikipedia.org/wiki/Hirsch_number)).}
 #'   }
 #'
 #' @source
-#'   SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2024-04-22, from http://www.scimagojr.com
+#'   SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2025-07-04, from http://www.scimagojr.com
 #'   \url{https://www.scimagojr.com/countryrank.php}
 "sjr_countries_total"

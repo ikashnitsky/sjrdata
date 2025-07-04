@@ -23,7 +23,7 @@ The installation will take a while since the main dataset `sjr_journals` is pret
 
 ```{r}
 # install
-devtools::install_github("ikashnitsky/sjrdata")
+pak::pak("ikashnitsky/sjrdata")
 
 # load
 library(sjrdata)

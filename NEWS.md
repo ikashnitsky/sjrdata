@@ -1,3 +1,11 @@
+# sjrdata 1.0.24
+
+2025-07-04
+
+Update to include 2024 data
+
+In this update I revert back to downloading all the data yearly. This came out of a productive discussion with [Mark Hanson](https://bsky.app/profile/hansonmark.bsky.social), in which he pointed out that SciMago group sometimes changes the data backwards in their update, and that it is better to have a fresh copy of the data every year. Starting from this year I will save a copy of the data for each year in a parquet format.
+
 # sjrdata 1.0.23
 
 2024-04-22
