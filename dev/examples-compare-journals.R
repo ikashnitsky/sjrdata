@@ -1,8 +1,9 @@
-#===============================================================================
+# ..........................................................
 # 2024-04-22 -- sjrdata
-# Illustrate the package using some demographic journals
-# Ilya Kashnitsky, ilya.kashnitsky@gmail.com, @ikashnitsky
-#===============================================================================
+# Illustrate the package using some demographic journals                -----------
+# Ilya Kashnitsky, ilya.kashnitsky@gmail.com
+# ..........................................................
+# UPD 2025-07-04
 
 library(tidyverse)
 library(hrbrthemes)
@@ -12,12 +13,12 @@ df <- sjr_journals
 
 df %>%
     filter(title %in% c("Nature", "Science")) %>%
-    ggplot(aes(cites_doc_2years, sjr, color = title))+
+    ggplot(aes(citations_doc_2years, sjr, color = title))+
     geom_path(size = 1, alpha = .5)+
     geom_label(aes(label = year %>% str_sub(3, 4)),
               size = 3, label.padding = unit(.15, "line"))+
     scale_color_viridis_d(NULL, end = .4, option = "B")+
-    theme_minimal(base_family = "mono")+
+    theme_minimal()+
     labs(x = "2-year citation per document (JIF analogue)",
          y = "SJR index",
          title = "Nature vs Science",
@@ -36,21 +37,22 @@ df %>%
         "Demographic Research",
         "Genus"
     )) %>%
-    ggplot(aes(cites_doc_2years, sjr, color = title))+
+    ggplot(aes(citations_doc_2years, sjr, color = title))+
     geom_point()+
     stat_ellipse()+
     scale_color_brewer(NULL, palette = "Dark2")+
     coord_cartesian(expand = F)+
-    theme_minimal(base_family = "mono")+
-    theme(legend.position = c(.8, .2))+
+    theme_minimal()+
+    theme(legend.position  = c(.3, .75))+
     labs(x = "2-year citation per document (JIF analogue)",
          y = "SJR index",
          title = "Selected demographic journals",
          subtitle = "SCImago Journal Rank, 1999--2017",
          caption = "ikashnitsky.github.io")
 
-# UPD  2022-05-18 ------------------------------
-# UPD  2023-12-06 ------------------------------
+# UPD 2022-05-18
+# UPD 2023-12-06
+# UPD 2025-07-04
 
 library(showtext)
 sysfonts::font_add_google("Atkinson Hyperlegible", "ah")
@@ -95,6 +97,6 @@ df %>%
         caption = "Ilya Kashnitsky @ikashnitsky.phd"
     )
 
-ggsave("~/Downloads/sjr-demography.pdf", width = 6, height = 4.5)
+ggsave("inst/figures/sjr-demography.pdf", width = 8, height = 6)
 
 sjr_countries %>% view
