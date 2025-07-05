@@ -13,7 +13,7 @@
 
 SCImago Journal & Country Rank provides valuable estimates of academic journals' prestige. The data is freely available at https://www.scimagojr.com and is distributed for deeper analysis in forms of .csv and .xlsx files. I downloaded all the files and pooled them together, ready to be used in R.
 
-![](inst/figures/sjr-demography.png)
+![](inst/figures/sjr-nature-science.png)
 
 # How to use `sjrdata`
 
@@ -33,6 +33,19 @@ View(sjr_countries)
 ```
 
 Basically, all the package gives you three easily accessible data frames: `sjr_journals` (Journal Rank), `sjr_countries` (Country Rank, year-by-year), and `sjr_countries_total` (Country Rank, all years together).
+
+
+***
+
+# Example plots using a subset of demographic journals
+
+You can see the script generating these plots [here](/dev/examples-compare-journals.R)
+
+![](inst/figures/sjr-dem-journals.png)
+
+![](inst/figures/sjr-dem-vs-2years-cite.png)
+
+![](inst/figures/sjr-dem-perc-female.png)
 
 
 ***
