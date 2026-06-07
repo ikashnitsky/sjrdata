@@ -5,7 +5,7 @@
 \alias{sjr_journals}
 \title{SCImago Journal Rank}
 \format{
-A tibble with 731,245 rows and 25 variables:
+A tibble with 768,391 rows and 26 variables:
   \describe{
     \item{year}{Year of SCImago Journal Ranking calculation.}
     \item{rank}{Rank of the journal among all journals.}
@@ -13,6 +13,9 @@ A tibble with 731,245 rows and 25 variables:
     \item{title}{Journal's title.}
     \item{type}{Type: "journal", "book series", "trade journal", or "conference and proceedings"}
     \item{issn}{ISSN journal identifier.}
+    \item{publisher}{Publisher of the journal.}
+    \item{open_acess}{A dummy variable encoding whether the journal is Open Acess.}
+    \item{open_acess_diamond}{A dummy variable encoding whether the journal is **Diammond** Open Acess.}
     \item{sjr}{SCImago Journal Rank indicator. It expresses the average number of weighted citations received in the selected year by the documents published in the selected journal in the three previous years, --i.e. weighted citations received in year X to documents published in the journal in years X-1, X-2 and X-3. See [detailed description of SJR](https://www.scimagojr.com/SCImagoJournalRank.pdf) (PDF).}
     \item{sjr_best_quartile}{Highest quartile of the journal among all categories it belongs to.}
     \item{h_index}{Hirsch index of the journal. The h index expresses the journal's number of articles (h) that have received at least h citations. It quantifies both journal scientific productivity and scientific impact and it is also applicable to scientists, countries, etc. ([see H-index Wikipedia definition](http://en.wikipedia.org/wiki/Hirsch_number)).}
@@ -28,21 +31,20 @@ A tibble with 731,245 rows and 25 variables:
     \item{sdg}{Number of documents related to the Sustainable Development Goals defined by the United Nations according to the [Elsevier 2023 Sustainable Development Goals (SDGs) Mapping](https://elsevier.digitalcommonsdata.com/datasets/y2zyy9vwzy/1). Available from 2018 onwards.}
     \item{country}{Country of the publisher.}
     \item{region}{Region of the publisher.}
-    \item{publisher}{Publisher of the journal.}
     \item{coverage}{Years covered.}
     \item{categories}{Categories the journal belongs to.}
     \item{area}{Areas of science. Only appeared in 2022.}
   }
 }
 \source{
-SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2025-07-04, from http://www.scimagojr.com
+SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2026-06-05, from http://www.scimagojr.com
   \url{https://www.scimagojr.com/journalrank.php}
 }
 \usage{
 sjr_journals
 }
 \description{
-SCImago Journal Rank for all journals indexed by Scopus in 1999--2024
+SCImago Journal Rank for all journals indexed by Scopus in 1999--2025
 }
 \examples{
 

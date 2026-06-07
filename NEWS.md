@@ -1,3 +1,16 @@
+# sjrdata 1.0.25
+
+2026-06-06
+
+Update to include 2025 data
+
+Refactoring of the main download functions to account for the introduction of cloudflare scraping blocking screen that https://www.scimagojr.com introduced. 
+
+There were also changes introduced in the list of variables available for the journals: 
+ - `sgd` variable, that was available from 2018 and covered Number of documents related to the Sustainable Development Goals defined by the United Nations according to the [Elsevier 2023 Sustainable Development Goals (SDGs) Mapping](https://elsevier.digitalcommonsdata.com/datasets/y2zyy9vwzy/1), is no longer reported;
+ - two new dummy variables `open_access` and `open_acess_diamond` appeared.
+
+
 # sjrdata 1.0.24
 
 2025-07-04

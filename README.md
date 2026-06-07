@@ -19,7 +19,7 @@ SCImago Journal & Country Rank provides valuable estimates of academic journals'
 
 Install the package from github, load it and use the data. 
 
-The installation will take a while since the main dataset `sjr_journals` is pretty heavy (28.5MB compressed).
+The installation will take a while since the main dataset `sjr_journals` is pretty heavy (29.1MB compressed).
 
 ```{r}
 # install
@@ -46,6 +46,8 @@ You can see the script generating these plots [here](/dev/examples-compare-journ
 ![](inst/figures/sjr-dem-vs-2years-cite.png)
 
 ![](inst/figures/sjr-dem-perc-female.png)
+
+![](inst/figures/sjr-total-n-journals.png)
 
 
 ***

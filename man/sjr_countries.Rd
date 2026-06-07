@@ -5,7 +5,7 @@
 \alias{sjr_countries}
 \title{SCImago Country Rank}
 \format{
-A tibble with 5914 rows and 10 variables:
+A tibble with 6806 rows and 10 variables:
   \describe{
     \item{year}{Year of SCImago Country Ranking calculation.}
     \item{rank}{Rank of the country in a given year.}
@@ -20,13 +20,13 @@ A tibble with 5914 rows and 10 variables:
   }
 }
 \source{
-SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2025-07-04, from http://www.scimagojr.com
+SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved 2026-06-05, from http://www.scimagojr.com
   \url{https://www.scimagojr.com/countryrank.php}
 }
 \usage{
 sjr_countries
 }
 \description{
-SCImago Country Rank for all papers indexed by Scopus in 1996--2024. Calculations year-by-year.
+SCImago Country Rank for all papers indexed by Scopus in 1996--2025. Calculations year-by-year.
 }
 \keyword{datasets}
